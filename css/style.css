@@ -1,7 +1,8 @@
 :root {
     --font: "JetBrains Mono";
-    --background: #1d1f21;
+    --background: #272a30;
     --foreground: #c5c8c6;
+    --statusbar: #1d1f21;
     --green: #b5bd68;
     --red: #cc6666;
     --orange: #f0c674;
@@ -19,21 +20,61 @@ html {
 }
 
 body {
+    font-family: var(--font);
     background: var(--background);
+}
+
+.statusbar {
+    position: absolute;
+    background: var(--statusbar);
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    color: var(--foreground);
+    font-size: 13px;
+    display:flex;
+    flex-direction: row-reverse;
+
+}
+
+.clock{
+    display: table-cell;
+}
+
+.weather{
+    display: table-cell;
+}
+
+.display{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border: var(--branch);
+    border-radius: 5px;
+    border-width: 2px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+img{
+    width: 30vh;
+    color: var(--foreground);
 }
 
 .container {
     position: absolute;
+    background-color: var(--background);
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 30%;
+    transform: translate(-30%, -50%);
     padding:20px;
-    border: var(--branch);
+    border:  1px solid var(--red);
     border-radius: 5px;
+    border-width: 2px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .prompt {
-    font-family: var(--font);
     color: var(--foreground);
 }
 
@@ -123,7 +164,7 @@ input {
     font-style: italic;
     font-size: 1rem;
     text-align: center;
-    animation: color-change 20s infinite;
+    animation: color-change 30s infinite;
     padding: 0 0.01rem;
 }
 

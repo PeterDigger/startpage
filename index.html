@@ -3,24 +3,25 @@
   <head>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet"> 
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title> ~ </title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/quote.js"></script>
+    <script src="js/weather.js"></script>
   </head>
-  <body>
+  <body onload="startTime()">
+    <div class="statusbar">
+      <div class="clock"></div>
+      <div class="weather"></div>
+    </div>
+    <div class="display">
+      <img src="https://c.tenor.com/TAmmjKMJmwIAAAAC/animated-koi-fish.gif" alt="Imagine this is a pixel fish and raining pond">
+    </div>
     <div class="container">
-      <div class="prompt"><span>~</span> quo
+      <div class="prompt"><span>-></span>  quo
         <p class="ansii"></p>  
-        <script>
-          fetch("https://api.quotable.io/random?maxLength=40")
-            .then(response => response.json())
-            .then(data => {
-              console.log(data.content);
-              document.querySelector(".ansii").innerHTML = data.content + "<br>- " + data.author;
-          })
-        </script>
       </div>
-      <div class="prompt"><span>~</span> tree </div>
+      <div class="prompt"><span>-></span>  tree </div>
       <div class="tree">
         <h1>.</h1>
         <ul>
@@ -56,8 +57,8 @@
           </li>
         </ul>
       </div>
-      <div class="prompt"><span>~</span>  ddg</div>
-      <form action="https://google.com/search?q=" method="GET">
+      <div class="prompt"><span>-></span>  ddg</div>
+      <form action="https://google.com/search?q=" method="GET" class="form">
         <h1>search: </h1>
         <input type="text" name="q" autofocus="autofocus">
       </form>
