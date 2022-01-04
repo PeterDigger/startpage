@@ -9,4 +9,4 @@ A customized fork from skovati/startpage ```tree``` inspired startpage with comm
 - Changed the background color to Monokai black
 - Changed the HTML form forwarding to google
 
-![Screenshot](scrot.png)
+![Screenshot](screenshot.png)
