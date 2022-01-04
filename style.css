@@ -1,15 +1,21 @@
 :root {
-    --font: "Roboto Mono";
+    --font: "JetBrains Mono";
     --background: #1d1f21;
     --foreground: #c5c8c6;
     --green: #b5bd68;
     --red: #cc6666;
     --orange: #f0c674;
+    --Rmagenta: #9C4F96;
+    --RDorange: #FF6355;
+    --RLorange: #FBA949;
+    --Ryellow: #FBA949;
+    --Rgreen: #8BD448;
+    --Rblue: #2AA8F2;
     --branch: 1px solid #a7a9be;
 }
 
 html {
-    font-size: 20px;
+    font-size: 15px;
 }
 
 body {
@@ -21,6 +27,9 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding:20px;
+    border: var(--branch);
+    border-radius: 5px;
 }
 
 .prompt {
@@ -29,7 +38,7 @@ body {
 }
 
 .prompt~.prompt {
-    padding: 1.5rem 0 0.3125rem;
+    padding: 1rem 0 0.3125rem;
 }
 
 span {
@@ -103,4 +112,27 @@ input {
     color: var(--foreground);
     background-color: var(--background);
     border: none;
+    width: auto;
+}
+
+.right {
+    text-align: left;
+}
+
+.ansii{
+    font-style: italic;
+    font-size: 1rem;
+    text-align: center;
+    animation: color-change 20s infinite;
+    padding: 0 0.01rem;
+}
+
+@keyframes color-change {
+    0% { color: var(--Rmagenta);}
+    14% { color: var(--RDorange);}
+    35% { color: var(--RLorange);}
+    51% { color: var(--Ryellow);}
+    67% { color: var(--Rgreen);}
+    84% { color: var(--Rblue);}
+    100% { color: var(--Rmagenta);}
 }

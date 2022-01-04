@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet"> 
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title> ~ </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="container">
-      <div class="prompt"><span>skovati</span>@<span>start</span> ~ tree</div>
+      <div class="prompt"><span>~</span> quo
+        <p class="ansii"></p>  
+        <script>
+          fetch("https://api.quotable.io/random?maxLength=40")
+            .then(response => response.json())
+            .then(data => {
+              console.log(data.content);
+              document.querySelector(".ansii").innerHTML = data.content + "<br>- " + data.author;
+            })
+        </script>
+      </div>
+      <div class="prompt"><span>~</span> tree </div>
       <div class="tree">
         <h1>.</h1>
         <ul>
@@ -19,41 +31,38 @@
                 <h1>/r/</h1>
                 <ul>
                   <li><a href="https://reddit.com/r/unixporn">unixporn</a></li>
-                  <li><a href="https://reddit.com/r/linux">linux</a></li>
-                  <li><a href="https://reddit.com/r/coffee">coffee</a></li>
-                  <li><a href="https://reddit.com/r/philosophy">philo</a></li>
                 </ul>
               </li>
-              <li><a href="https://4chan.org/wg/catalog">/wg/</a></li>
-              <li><a href="https://lbry.tv">lbry</a></li>
-              <li><a href="https://lichess.org">lichess</a></li>
+              <li><a href="https://youtube.com/feed/subscriptions">utube</a></li>
+              <li><a href="#">movie</a></li>
+              <li><a href="https://feedly.com">feedly</a></li>
             </ul>
           </li>
           <li>
             <h1>/dev/</h1>
             <ul>
               <li><a href="https://wiki.archlinux.org">arch</a></li>
-              <li><a href="https://github.com/skovati">github</a></li>
-              <li><a href="https://golang.org">golang</a></li>
+              <li><a href="https://wiki.gentoo.org">gentoo</a></li>
+              <li><a href="https://github.com/peterdigger">github</a></li>
             </ul>
           </li>
           <li>
             <h1>/etc/</h1>
             <ul>
-              <li><a href="https://files.skovati.dev">files</a></li>
-              <li><a href="https://torrent.skovati.dev">torrent</a></li>
-              <li><a href="https://b-ok.cc">zlib</a></li>
-              <li><a href="https://www.rarbg.to">rarbg</a></li>
-              <li><a href="https://thepiratebay.org">tpb</a></li>
+              <li><a href="#">cctv</a></li>
+              <li><a href="#">router</a></li>
+              <li><a href="#">server</a></li>
             </ul>
           </li>
         </ul>
       </div>
-      <div class="prompt"><span>skovati</span>@<span>start</span> ~ ddg</div>
-      <form action="https://duckduckgo.com/" method="GET">
+      <div class="prompt"><span>~</span>  ddg</div>
+      <form action="https://google.com/search?q=" method="GET">
         <h1>search: </h1>
         <input type="text" name="q" autofocus="autofocus">
       </form>
+      
     </div>
+
   </body>
 </html>

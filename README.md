@@ -1,7 +1,9 @@
 # startpage
 
-### `tree` inspired startpage with common links, as well as an html form forwarding to duckduckgo
+A customized fork from skovati/startpage tree inspired startpage with common links
 
-Try it out [here!](https://start.skovati.com)
+- Added rainbow animation quote (fetched from [this website](https://github.com/lukePeavey/quotable))
+- Added border
+- Changed the html form forwarding to google
 
 ![Screenshot](scrot.png)
