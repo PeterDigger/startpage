@@ -1,0 +1,8 @@
+This folder is for the New tab
+
+To update the static page, run this
+
+
+```
+sudo docker build -t startpage .
+```
