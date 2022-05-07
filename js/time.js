@@ -1,14 +1,12 @@
-const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", 
-"Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-const weekNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", 
-"Sat"];
+const weekNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 function startTime() {
     const d = new Date();
     let h, M, dayW, month, day, year, m, s;
     dayW = d.getDay();
-    month = '' + (d.getMonth() + 1);
+    month = '' + d.getMonth();
     day = '' + d.getDate();
     year = d.getFullYear() - 2000;
 
@@ -27,7 +25,7 @@ function startTime() {
     document.getElementsByClassName("clock")[0].innerHTML = 
         weekNames[dayW] + " (" + 
         day + " " + 
-        monthNames[month - 1] + " " + 
+        monthNames[month] + " " + 
         year + ") " + 
         h + ":" + 
         m + 
