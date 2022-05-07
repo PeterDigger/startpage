@@ -27,7 +27,7 @@ function startTime() {
     document.getElementsByClassName("clock")[0].innerHTML = 
         weekNames[dayW] + " (" + 
         day + " " + 
-        monthNames[month + 1] + " " + 
+        monthNames[month - 1] + " " + 
         year + ") " + 
         h + ":" + 
         m + 
